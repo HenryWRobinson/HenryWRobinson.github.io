@@ -11,7 +11,7 @@
     },
     
      "data": {
-      "url": "PASTE YOUR API HERE",
+      "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=nation&metric=newPeopleVaccinatedFirstDoseByVaccinationDate&metric=newPeopleVaccinatedSecondDoseByVaccinationDate&format=csv",
       "format": {"type": "csv"}
     },
   
@@ -41,7 +41,7 @@
       },
   
       "y": {
-        "field": "VARIABLE YOU ARE MEASURING HERE",
+        "field": "newPeopleVaccinatedFirstDoseByVaccinationDate",
         "type": "quantitative",
         "title": null,
         "axis": {"grid": false}
