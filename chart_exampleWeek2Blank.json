@@ -1,0 +1,60 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "title": {
+      "text": "TITLE HERE",
+      "subtitle":"Sub-title here",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+    
+     "data": {
+      "url": "PASTE YOUR API HERE",
+      "format": {"type": "csv"}
+    },
+  
+     "transform":[
+        
+        {"filter": {
+          "field": "VARIABLE TO FILTER HERE", 
+          "oneOf": ["X", "Y", "Z"]}
+          }
+  
+  
+      ],
+    
+    
+    "height": 300,
+    "width": 310,
+     
+    "mark": {"type": "line", "point": false},
+   
+    "encoding": {
+  
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "title": null,
+        "axis": {"grid": false}
+      },
+  
+      "y": {
+        "field": "VARIABLE YOU ARE MEASURING HERE",
+        "type": "quantitative",
+        "title": null,
+        "axis": {"grid": false}
+      },
+  
+      "color": {
+        "field": "areaName",
+        "type": "nominal",
+        "scale": {"scheme": "set1"},
+        "title": "LEGEND TITLE",
+        "legend": {
+          "orient": "top-left", 
+          "fillColor": "#FcFdFd"}
+      }
+  }
+  }
