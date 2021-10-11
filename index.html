@@ -34,7 +34,7 @@
     <p>The first chart tracks Covid-19 cases by UK region.</p>
 
 <!--Vaga embed, with notes for what is going on-->
-<div class="chart" id="firstChart">
+<div class="chart" id="chart1">
 
   <script>
     // Following the script tag we are using Javascript.
@@ -43,7 +43,7 @@
     var myChart1 = "chart1_covidUKRegions.json";
     // Now we simply insert it, using Vega's embed code:
     // The embed function needs to be told the location, and what to put there. 
-    vegaEmbed('#firstChart', myChart1);
+    vegaEmbed('#chart1', myChart1);
   </script>
 
 </div>
@@ -52,10 +52,10 @@
 
   <p>My second chart looks at productivity in the UK</p>
 
-<div class="chart" id="secondChart">
+<div class="chart" id="chart2">
     <script>
     var myChart2 = "chart2_ukProductivity.json";
-    vegaEmbed('#secondChart', myChart2);
+    vegaEmbed('#chart2', myChart2);
     </script>
 </div>
     
@@ -63,10 +63,10 @@
     
     <p>My third chart looks at declining populations taken from..</p>
     
-<div class="chart" id="thirdChart">
+<div class="chart" id="chart3">
     <script>
     var myChart3 = "Chart3DecliningPop.json";
-    vegaEmbed('#thirdChart', myChart3);
+    vegaEmbed('#chart3', myChart3);
     </script>  
 </div>  
        
