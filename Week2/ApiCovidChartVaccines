@@ -18,8 +18,8 @@
      "transform":[
         
         {"filter": {
-          "field": "VARIABLE TO FILTER HERE", 
-          "oneOf": ["X", "Y", "Z"]}
+          "field": "areaName", 
+          "oneOf": ["Hampshire", "Bristol, City of", "Manchester"]}
           }
   
   
