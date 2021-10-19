@@ -32,20 +32,20 @@
     <h3>Covid-19</h3>
 
     <p>The first chart tracks Covid-19 cases by UK region.</p>
+    
+<div class="button" id="button1">
+    <script>
+        var mybutton1 = "https://rapidcharts.io/datascience"
+        vegaEmbed('#button1',mybutton1);
+    </script>
+</div>    
 
-<!--Vaga embed, with notes for what is going on-->
+
 <div class="chart" id="chart1">
-
   <script>
-    // Following the script tag we are using Javascript.
-    // One way to tell is to see how comments work...
-    // First job is to set the chart as a JS variable:
     var myChart1 = "week1/chart1_covidUKRegions.json";
-    // Now we simply insert it, using Vega's embed code:
-    // The embed function needs to be told the location, and what to put there. 
     vegaEmbed('#chart1', myChart1);
   </script>
-
 </div>
 
   <h3>Productivity puzzle</h3>
