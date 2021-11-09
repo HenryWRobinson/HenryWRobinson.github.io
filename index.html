@@ -22,7 +22,8 @@
 </head>
 
 
-
+<link rel="icon" type="image/png" href="/favicon.png"/>
+<link rel="icon" type="image/png" href="https://example.com/favicon.png"/>
 
 <body>
 
@@ -31,56 +32,98 @@
    
 <a href = "https://rapidcharts.io/datascience">
  <button>Course Homepage</button>
-</a>
-    
 <a href = "https://github.com/HenryWRobinson/HenryWRobinson.github.io">
  <button>Github Repository</button>
+<style>
+    button {
+      display: inline-block;
+      background-color: #0003c5;
+      border-radius: 10px;
+      border: 4px double #cccccc;
+      color: #fbff00;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 200px;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+    button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      button:hover {
+        background-color: #4f7fd8;
+      }
+      button:hover span {
+        padding-right: 25px;
+      }
+      button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+  </style>
 </a>
 
-<h3>Covid-19</h3>
+<div class="container">
+    <h3>Covid-19</h3>
+    <p>The first chart tracks Covid-19 cases by UK region.</p>
+    
+    <div class="chart" id="chart1">
+        <script>
+        var myChart1 = "week1/chart1_covidUKRegions.json";
+        vegaEmbed('#chart1', myChart1);
+        </script>
+    </div>
 
-<p>The first chart tracks Covid-19 cases by UK region.</p>
+    <h3>Productivity puzzle</h3>
 
-<div class="chart" id="chart1">
-  <script>
-    var myChart1 = "week1/chart1_covidUKRegions.json";
-    vegaEmbed('#chart1', myChart1);
-  </script>
-</div>
+    <p>My second chart looks at productivity in the UK</p>
 
-  <h3>Productivity puzzle</h3>
-
-  <p>My second chart looks at productivity in the UK</p>
-
-<div class="chart" id="chart2">
-    <script>
-    var myChart2 = "week1/chart2_ukProductivity.json";
-    vegaEmbed('#chart2', myChart2);
-    </script>
-</div>
+    <div class="chart" id="chart2">
+        <script>
+        var myChart2 = "week1/chart2_ukProductivity.json";
+        vegaEmbed('#chart2', myChart2);
+        </script>
+    </div>  
     
     <h3>Over Population</h3>
     
     <p>My third chart looks at declining populations (taken from the Rapidcharts Chart Library)</p>
     
-<div class="chart" id="chart3">
-    <script>
-    var myChart3 = "week1/Chart3DecliningPop.json";
-    vegaEmbed('#chart3', myChart3);
-    </script>  
-</div>  
-
-<h3>API Covid Chart</h3>
+    <div class="chart" id="chart3">
+        <script>
+        var myChart3 = "week1/Chart3DecliningPop.json";
+        vegaEmbed('#chart3', myChart3);
+        </script>  
+    </div>  
+</div>
+<div class="container">
+    <h3>API Covid Chart</h3>
     
     <p>Using API</p>
     
-<div class="chart" id="chart4">
+    <div class="chart" id="chart4">
     <script>
     var myChart4 = "Week2/ApiCovidChartVaccines.json";
     vegaEmbed('#chart4', myChart4);
     </script>  
 </div>      
-    
+</div>   
 </body>
 
  
