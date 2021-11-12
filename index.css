@@ -1,11 +1,12 @@
 
 
-
 body {
 	background: linear-gradient(-45deg, #e4876b, #d46892, #76c3df, #6f9c92);
-	background-size: 400% 400%;
+	background-size: auto;
 	animation: gradient 15s ease infinite;
-	height: 100vh;
+	height: auto;
+	max-width: auto;
+    margin: auto;
 }
 
 @keyframes gradient {
@@ -28,11 +29,28 @@ h1, h3, p{
 }
 
 .chart{
+	display: run-in;
+	align-items: center;
+	justify-content: center;
     background-color: white;
-    width:330px;
+    width:400px;
+	height: 400px;
+	padding: 5px;
     border-width: 10px;
     border-style: solid;
-    border-radius: 5px;
-    border-color: white;
+    border-radius: 10px;
+    border-color: rgb(0, 0, 0);
+	font-size: 10pxp;
+}
+
+h1 {
+	text-align: center;
+	font-weight: bold;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
