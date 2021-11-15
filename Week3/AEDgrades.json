@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A simple bar chart with embedded data.",
   "title":{
-      "text": "Quality of Applied Economics Dissertation",
+      "text": "Quality of Applied Economics Dissertations",
       "subtitle": "Observations for 182 students in 2019/20",
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 10,
