@@ -1,0 +1,60 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "title": {
+      "text": "Covid Related Deaths Within 60 Days",
+      "subtitle":"New Covid-19 Related Deaths in South England by Death Date",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+    
+     "data": {
+      "url": "https://raw.githubusercontent.com/HenryWRobinson/HenryWRobinson.github.io/main/Data/NewCovidDeath60day.csv",
+      "format": {"type": "csv"}
+    },
+  
+     "transform":[
+        
+        {"filter": {
+          "field": "areaName", 
+          "oneOf": ["London", "South East", "South West"]}
+          }
+  
+  
+      ],
+    
+    
+    "height": 300,
+    "width": 310,
+     
+    "mark": {"type": "line", "point": false},
+   
+    "encoding": {
+  
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "title": "Date",
+        "axis": {"grid": false}
+      },
+  
+      "y": {
+        "field": "newDeaths60DaysByDeathDate",
+        "type": "quantitative",
+        "title": "Deaths Within 60 Days of Positive Test",
+        "axis": {"grid": false}
+      },
+  
+      "color": {
+        "field": "areaName",
+        "type": "nominal",
+        "scale": {"scheme": "set1"},
+        "title": null,
+        "legend": {
+          "orient": "top-left", 
+          "fillColor": "#FcFdFd"}
+      }
+  }
+  }
