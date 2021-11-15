@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A simple bar chart with embedded data.",
   "title":{
-      "text": "Grade Distribution",
-      "subtitle": "Observations for 2019/20 Data Science Class",
+      "text": "Quality of Applied Economics Dissertation",
+      "subtitle": "Observations for 182 students in 2019/20",
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 10,
       "anchor": "start",
@@ -11,7 +11,7 @@
   },
   "data": {
     "values": [
-      {"a": "Fail", "b": 7}, {"a": "3rd", "b": 21}, {"a": "2:2", "b": 46}, {"a": "2:1", "b": 80}, {"a": "1st", "b": 90}
+      {"a": "Fail", "b": 1}, {"a": "3rd", "b": 2}, {"a": "2:2", "b": 33}, {"a": "2:1", "b": 104}, {"a": "1st", "b": 42}
     ]
   },
   "height": 300,
