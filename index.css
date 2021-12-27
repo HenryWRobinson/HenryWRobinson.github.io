@@ -29,8 +29,8 @@ h1, h3, p{
 }
 
 .chart{
-	display: run-in;
-	align-items: center;
+	/*display: run-in;
+	align-items: center;*/
 	justify-content: center;
     background-color: white;
     width:400px;
