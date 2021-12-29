@@ -1,1 +1,41 @@
 
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "description": "Emissions data using satellite imagary",
+    "title": {
+    "text": "China's Methane Emissions",
+    "subtitle":"Emissions API: Dry-air mixing ratio of methane for cloud-free observations with a spatial resolution of 7x7km2 observed at about 13:30 local solar time from spectra measured by TROPOMI",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+    },
+
+    "data": {"url": "https://api.v2.emissions-api.org/api/v2/methane/statistics.json?country=CN&interval=week&end=2021-12-01&offset=0"},
+  
+    "mark":{
+      "type": "circle",
+      "point": false,
+      "color":"#0B31A5"
+    },
+     
+    "width":500,
+    
+    "encoding": {
+      
+      "x": {
+        "field": "time.interval_start", 
+        "type": "temporal", 
+        "title":null
+        },
+  
+      "y": {
+        "field": "value.average", 
+        "type": "quantitative",
+        "title":null,
+      "scale": {"domain": [1800,1950]}
+        }
+    }
+  }
+  
