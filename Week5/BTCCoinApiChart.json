@@ -3,7 +3,7 @@
     
     "title": {
       "text": "Completely Vaccinated Population",
-      "subtitle":"Cumulative Completely Vaccinated Individuals for South of England",
+      "subtitle":"",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
@@ -32,18 +32,8 @@
       "y": {
         "field": "price_close",
         "type": "quantitative",
-        "title": "Completely Vaccinated Individuals",
+        "title": "Closing price in GBP",
         "axis": {"grid": false}
-      },
-  
-      "color": {
-        "field": "areaName",
-        "type": "nominal",
-        "scale": {"scheme": "set1"},
-        "title": null,
-        "legend": {
-          "orient": "top-left", 
-          "fillColor": "#FcFdFd"}
       }
   }
   }
