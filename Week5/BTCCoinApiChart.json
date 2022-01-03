@@ -23,14 +23,14 @@
     "encoding": {
   
       "x": {
-        "field": "date",
+        "field": "time_period_start",
         "type": "temporal",
         "title": "Date",
         "axis": {"grid": false}
       },
   
       "y": {
-        "field": "cumPeopleVaccinatedCompleteByVaccinationDate",
+        "field": "price_close",
         "type": "quantitative",
         "title": "Completely Vaccinated Individuals",
         "axis": {"grid": false}
