@@ -11,23 +11,12 @@
     },
     
      "data": {
-      "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=region&metric=cumPeopleVaccinatedCompleteByVaccinationDate&format=csv",
-      "format": {"type": "csv"}
+      "url": "https://github.com/HenryWRobinson/HenryWRobinson.github.io/blob/a4151d4392c913f14e2de86d7fc1cd6493b6b626/Week5/CoinAPIBTC.json"
     },
-  
-     "transform":[
-        
-        {"filter": {
-          "field": "areaName", 
-          "oneOf": ["London", "South East", "South West"]}
-          }
-  
-  
-      ],
     
     
-    "height": 300,
-    "width": 310,
+    "height": 150,
+    "width": 152,
      
     "mark": {"type": "line", "point": false},
    
