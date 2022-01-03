@@ -1,0 +1,39 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "title": {
+      "text": "Value of US Dollar in GBP",
+      "subtitle":"Closing prices from Coin API",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+    
+     "data": {
+      "url": "https://raw.githubusercontent.com/HenryWRobinson/HenryWRobinson.github.io/main/Week5/CoinAPIUSD.json"
+    },
+    
+    
+    "height": 300,
+    "width": 400,
+     
+    "mark": {"type": "line", "point": false},
+   
+    "encoding": {
+  
+      "x": {
+        "field": "time_period_start",
+        "type": "temporal",
+        "title": "Date",
+        "axis": {"grid": false}
+      },
+  
+      "y": {
+        "field": "price_close",
+        "type": "quantitative",
+        "title": "Closing price in GBP",
+        "axis": {"grid": false}
+      }
+  }
+  }
