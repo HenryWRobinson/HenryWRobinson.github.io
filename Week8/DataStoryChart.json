@@ -1,1 +1,44 @@
-
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "title": {
+      "text": "National Lottery Jackpots",
+      "subtitle":"Scraped from https://www.national-lottery.co.uk/results/lotto/draw-history",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+    
+     "data": {
+      "url": "https://raw.githubusercontent.com/HenryWRobinson/HenryWRobinson.github.io/main/Week8/fullUKdatavaladdgdp.csv"
+    },
+    
+    
+    "height": 300,
+    "width": 400,
+     
+    "mark": {"type": "line"},
+   
+    "encoding": {
+  
+      "x": {
+        "field": "year",
+        "type": "temporal",
+        "title": "Year",
+        "axis": {"grid": false}
+      },
+  
+      "y": {
+        "field": "valueaddedGDP",
+        "type": "quantitative",
+        "title": "Value Added (% of GDP",
+        "axis": {"grid": false},
+        "scale": {"domain": [0,100]}
+      },
+      "color":{
+        "field": "seriesname",
+        "title": "Sector"
+      }
+  }
+  }
