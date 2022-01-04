@@ -1,1 +1,40 @@
-
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "title": {
+      "text": "National Lottery Jackpots",
+      "subtitle":"Scraped from https://www.national-lottery.co.uk/results/lotto/draw-history",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+    
+     "data": {
+      "url": "https://raw.githubusercontent.com/HenryWRobinson/HenryWRobinson.github.io/main/Week7/ScraperNatLotData.csv"
+    },
+    
+    
+    "height": 300,
+    "width": 400,
+     
+    "mark": {"type": "line", "point": false},
+   
+    "encoding": {
+  
+      "x": {
+        "field": "Date",
+        "type": "temporal",
+        "title": "Date",
+        "axis": {"grid": false}
+      },
+  
+      "y": {
+        "field": "Jackpot(£)",
+        "type": "quantitative",
+        "title": "Jackpot (£)",
+        "axis": {"grid": false},
+        "scale": {"domain": [0,21000000]}
+      }
+  }
+  }
