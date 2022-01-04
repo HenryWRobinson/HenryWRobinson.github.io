@@ -1,0 +1,34 @@
+seriesname,year,valueaddedGDP
+"Agriculture, forestry, and fishing",2010,0.602160408635432
+"Agriculture, forestry, and fishing",2011,0.690202927926714
+"Agriculture, forestry, and fishing",2012,0.637404835144407
+"Agriculture, forestry, and fishing",2013,0.637535517007732
+"Agriculture, forestry, and fishing",2014,0.746524020846814
+"Agriculture, forestry, and fishing",2015,0.63445245275453
+"Agriculture, forestry, and fishing",2016,0.566834503763194
+"Agriculture, forestry, and fishing",2017,0.593378706173113
+"Agriculture, forestry, and fishing",2018,0.576624141134484
+"Agriculture, forestry, and fishing",2019,0.611985280782944
+"Agriculture, forestry, and fishing",2020,0.583375423744929
+Manufacturing,2010,9.49748634625464
+Manufacturing,2011,9.33861392780752
+Manufacturing,2012,9.29488687690802
+Manufacturing,2013,9.50570363409744
+Manufacturing,2014,9.32600702924374
+Manufacturing,2015,9.21335750295058
+Manufacturing,2016,8.99516918752895
+Manufacturing,2017,8.94760157032687
+Manufacturing,2018,8.84698166833764
+Manufacturing,2019,8.87972817602048
+Manufacturing,2020,8.67076393053482
+Services,2010,70.6144728150131
+Services,2011,70.1077981610162
+Services,2012,70.2665051659884
+Services,2013,69.9085132071684
+Services,2014,70.1288588085677
+Services,2015,70.4744493109799
+Services,2016,71.0521174350578
+Services,2017,70.8613098868317
+Services,2018,70.8586355650806
+Services,2019,70.8564734447961
+Services,2020,72.7985091413881
