@@ -1,0 +1,65 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Police Stops in the Area around Queen's Square Bristol",
+        "anchor": "start",
+        "color": "black",
+        "subtitle": "Police stop and searches in November 2021 by ethnicity",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "subtitleColor": "black"
+    },
+    "data": {
+        "url": "https://data.police.uk/api/stops-street?lat=51.45057&lng=-2.59468"
+    },
+    "selection": {
+      "reason":{
+        "type": "single",
+        "fields": ["object_of_search"],
+        "bind": {
+          "input": "select",
+          "options": [
+            "Controlled drugs",
+            "Stolen goods",
+            "Offensive weapons",
+            "Articles for use in criminal damage",
+            "Fireworks",
+            "Anything to threaten or harm anyone"
+        ],
+        "name": "Pick a month: "
+      }
+    }
+    },
+    "transform": [
+        {
+            "calculate": "1",
+            "as": "stop"
+        },
+        {
+            "filter": {"selection": "reason"}
+        }
+    ],
+    "width": 300,
+    "height": 300,
+    "mark": {
+        "type": "arc",
+        "innerRadius": 80
+    },
+    "encoding": {
+        "theta": {
+            "aggregate": "sum",
+            "field": "stop",
+            "type": "quantitative"
+        },
+        "color": {
+            "field": "self_defined_ethnicity",
+            "type": "nominal",
+            "scale": {
+                "scheme": "sinebow"
+            },
+            "legend": {
+                "title": null
+            }
+        }
+    }
+}
