@@ -1,11 +1,4 @@
 "Title","Gross Domestic Product: quarter on quarter growth rate: CP SA %"
-"CDID","IHYN"
-"Source dataset ID","QNA"
-"PreUnit",""
-"Unit","%"
-"Release date","22-12-2021"
-"Next release","11 February 2022"
-"Important notes",
 "1955 Q2","0.5"
 "1955 Q3","3.7"
 "1955 Q4","1.8"
@@ -272,3 +265,5 @@
 "2021 Q1","0.7"
 "2021 Q2","3.4"
 "2021 Q3","1.6"
+"2021 Q4","1.1"
+"2022 Q1","0.7"
