@@ -19,20 +19,22 @@
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
+<!-- /////////////////// FAVICON //////////////////////////////////// -->
 <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
 <link rel="manifest" href="favicon_io/site.webmanifest">
+<!-- /////////////////// END FAVICON //////////////////////////////////// -->
 
 </head>
 
-
+<!-- /////////////////// BUTTONS //////////////////////////////////// -->
 
 <body>
 
   <h1>Data Science 2021</h1>
 
-<div class="container">
+<div class="hcontainer" style="border-bottom:#002535">
 <a href = index.html>
 <button>Portfolio</button>   
 <a href = project.html>
@@ -44,10 +46,10 @@
 <style>
   button {
     display: inline-block;
-    background-color: #0003c5;
+    background-color: #bbc3c9;
     border-radius: 10px;
-    border: 4px double #cccccc;
-    color: #fbff00;
+    border: 4px double #33b573;
+    color: Hex 6:  #2d414f;
     text-align: center;
     font-size: 28px;
     padding: 20px;
@@ -88,20 +90,31 @@
 </a>
 </div>
 
-<div class="container">
-  <h3>Covid-19</h3>
-  <p>The first chart tracks Covid-19 cases by UK region.</p>
+<!-- /////////////////// END BUTTONS //////////////////////////////////// -->
+
+<!-- /////////////////// SKILL 1 & 2: BUILDING SITE & EMBEDDING //////////////////////////////////// -->
+
+<div class="bcontainer">
+  <h3>Covid-19 cases for UK regions</h3>
   
+<!-- /////////////////// Chart 1 //////////////////////////////////// --> 
+<div class="box">  
+  <p>My First embedded chart </p>
   <div class="chart" id="chart1">
     <script>
       var myChart1 = "Week1/chart1_covidUKRegions.json";
       vegaEmbed('#chart1', myChart1);
     </script>
   </div>
+</div>
 
-  <h3>Productivity puzzle</h3>
+</div>
 
-  <p>My second chart looks at productivity in the UK</p>
+<!-- /////////////////// Chart 2 //////////////////////////////////// --> 
+
+<div class="bcontainer">
+  <h3>2 Charts Using examples from <a href="https://rapidcharts.io">RapidCharts</a></h3>
+<div class="box">
 
   <div class="chart" id="chart2">
     <script>
@@ -109,147 +122,206 @@
       vegaEmbed('#chart2', myChart2);
     </script>
   </div>  
-  
-  <h3>Over Population</h3>
-  
-  <p>My third chart looks at declining populations (taken from the Rapidcharts Chart Library)</p>
-  
+</div>
+
+<!-- /////////////////// Chart 3 //////////////////////////////////// --> 
+<div class="box">  
   <div class="chart" id="chart3">
     <script>
       var myChart3 = "Week1/Chart3DecliningPop.json";
       vegaEmbed('#chart3', myChart3);
     </script>  
   </div>  
+</div>
 
 </div>
-    
-<div class="container">
-  <h3>API Covid Chart</h3>
+
+<!-- /////////////////// END SKILL 1 & 2 //////////////////////////////////// --> 
+
+<!-- /////////////////// SKILL 3: HOSTING DATA //////////////////////////////////// --> 
+
+<div class="bcontainer">
   
-  <p>Using API</p>
-  
+<!-- /////////////////// CHART 4 //////////////////////////////////// -->
+<div class="box"> 
   <div class="chart" id="chart4">
     <script>
       var myChart4 = "Week2/SouthEngCumCompVac.json";
       vegaEmbed('#chart4', myChart4);
     </script>  
   </div>
+</div>
 
+<!-- /////////////////// CHART 5 //////////////////////////////////// -->
+<div class="box">
   <div class="chart" id="chart5">
     <script>
       var myChart5 = "Week2/SouthEng60DayDeath.json";
       vegaEmbed('#chart5', myChart5);
     </script>  
   </div>
+</div>
 
 </div> 
-      
-<div class="container">
+<!-- /////////////////// END SKILL 3 //////////////////////////////////// -->
 
+<!-- /////////////////// SKILL 4: EDITTING JSON //////////////////////////////////// -->
+<div class="bcontainer">
+
+<!-- /////////////////// CHART 7 //////////////////////////////////// -->
+<div class="box">
   <div class="chart" id="chart7">
     <script>
       var myChart7 = "Week3/AEDgrades.json";
       vegaEmbed('#chart7', myChart7);
     </script> 
   </div>
-    
+</div>
+
+<!-- /////////////////// CHART 8 //////////////////////////////////// -->
+  
 </div>   
-    
-<div class="container">
-    
-  <div class="chart" id="chart8">
+<!-- /////////////////// END SKILL 4 //////////////////////////////////// -->
+
+<!-- /////////////////// SKILL 5: APIS //////////////////////////////////// -->
+<div class="bcontainer">
+
+<!-- /////////////////// CHART 9 //////////////////////////////////// -->
+<div class="box">  
+  <div class="chart" id="chart9">
     <script>
-      var myChart8 = "Week4/EmissionsAPI.json";
-      vegaEmbed('#chart8', myChart8);
+      var myChart9 = "Week4/EmissionsAPI.json";
+      vegaEmbed('#chart9', myChart9);
     </script> 
   </div>  
-  
+</div>
+
+<!-- /////////////////// CHART 10 //////////////////////////////////// -->
+<div class="box">
   <div class='image-wk4-container'>
     <img src='Week4/GhibliAPIPythonChart.png' class='image-week4'>
   </div>
-    
 </div>
 
-<div class="container">
-    
-  <div class="chart" id="chart10">
-    <script>
-      var myChart10 = "Week5/BTCCoinApiChart.json";
-      vegaEmbed('#chart10', myChart10);
-    </script> 
-  </div>
+</div>
+<!-- /////////////////// END SKILL 5 //////////////////////////////////// -->
 
+<!-- /////////////////// SKILL 6: LOOPS & APIS //////////////////////////////////// -->
+<div class="bcontainer">
+
+<!-- /////////////////// CHART 11 //////////////////////////////////// -->
+<div class="box">
   <div class="chart" id="chart11">
     <script>
-      var myChart11 = "Week5/ETHCoinApiChart.json"
+      var myChart11 = "Week5/BTCCoinApiChart.json";
       vegaEmbed('#chart11', myChart11);
-    </script>
+    </script> 
   </div>
-  
+</div>
+
+<!-- /////////////////// CHART 12 //////////////////////////////////// -->
+<div class="box">
   <div class="chart" id="chart12">
     <script>
-      var myChart12 = "Week5/JPYCoinApiChart.json"
+      var myChart12 = "Week5/ETHCoinApiChart.json"
       vegaEmbed('#chart12', myChart12);
     </script>
   </div>
+</div>
 
+<!-- /////////////////// CHART 13 //////////////////////////////////// -->
+<div class="box">
   <div class="chart" id="chart13">
     <script>
-      var myChart13 = "Week5/USDCoinApiChart.json"
+      var myChart13 = "Week5/JPYCoinApiChart.json"
       vegaEmbed('#chart13', myChart13);
     </script>
   </div>
-   
 </div>
 
-<div class="container">
-
+<!-- /////////////////// CHART 14 //////////////////////////////////// -->
+<div class="box">
   <div class="chart" id="chart14">
     <script>
-      var myChart14 = "Week7/ScraperResults.json"
+      var myChart14 = "Week5/USDCoinApiChart.json"
       vegaEmbed('#chart14', myChart14);
     </script>
   </div>
+</div> 
 
 </div>
+<!-- /////////////////// END SKILL 6 //////////////////////////////////// -->
 
-<div class="container">
+<!-- /////////////////// SKILL 7: LOOPS & SCRAPERS //////////////////////////////////// -->
+<div class="bcontainer">
 
+<!-- /////////////////// CHART 15 //////////////////////////////////// -->
+<div class="box">  
   <div class="chart" id="chart15">
     <script>
-      var myChart15 = "Week8/DataStoryChart.json"
+      var myChart15 = "Week7/ScraperResults.json"
       vegaEmbed('#chart15', myChart15);
     </script>
   </div>
-
 </div>
 
-<div class="container">
-
-  <div class='image-wk9-container'>
-    <img src='Week9/Week9Regressiongraph.png' class='image-week4'>
-  </div>
-
 </div>
-    
-<div class="container">
+<!-- /////////////////// END SKILL 7 //////////////////////////////////// -->
 
+<!-- /////////////////// SKILL 8: DATA STORY //////////////////////////////////// -->
+<div class="bcontainer">
+
+<!-- /////////////////// CHART 16 //////////////////////////////////// -->
+<div class="box"> 
   <div class="chart" id="chart16">
     <script>
-      var myChart16 = "Week_10/InteractiveChartPoliceAPI.json"
+      var myChart16 = "Week8/DataStoryChart.json"
       vegaEmbed('#chart16', myChart16);
     </script>
   </div>
-
-  <div class="chart" id="chart17">
-    <script>
-      var myChart17 = "Week_10/InteractiveHMforcesEmploy.json"
-      vegaEmbed('#chart17', myChart17);
-    </script>
-  </div>
+</div>
 
 </div>
-    
+<!-- /////////////////// END SKILL 8 //////////////////////////////////// -->
+
+<!-- /////////////////// SKILL 9: ANALYTICS //////////////////////////////////// -->
+<div class="bcontainer">
+
+<!-- /////////////////// CHART 17 //////////////////////////////////// -->
+<div class="box"> 
+  <div class='image-wk9-container'>
+    <img src='Week9/Week9Regressiongraph.png' class='image-week4'>
+  </div>
+</div>
+
+</div>
+<!-- /////////////////// END SKILL 9 //////////////////////////////////// -->
+
+<!-- /////////////////// SKILL 10: INTERACTIVITY //////////////////////////////////// -->
+<div class="bcontainer">
+
+<!-- /////////////////// CHART 18 //////////////////////////////////// -->
+<div class="box">
+  <div class="chart" id="chart18">
+    <script>
+      var myChart18 = "Week_10/InteractiveChartPoliceAPI.json"
+      vegaEmbed('#chart18', myChart18);
+    </script>
+  </div>
+</div>
+
+<!-- /////////////////// CHART 19 //////////////////////////////////// -->
+<div class="box">  
+  <div class="chart" id="chart19">
+    <script>
+      var myChart19 = "Week_10/InteractiveHMforcesEmploy.json"
+      vegaEmbed('#chart19', myChart19);
+    </script>
+  </div>
+</div>
+
+</div>
+<!-- /////////////////// END SKILL 10 //////////////////////////////////// -->    
     
     
 </body> 
