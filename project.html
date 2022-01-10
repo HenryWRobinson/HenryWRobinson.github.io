@@ -106,13 +106,14 @@
    I then decided to create an automated and replicable method of combining all these datasets. This turned out to be a huge undertaking with many hurdles.
    First, I built a python loop that would scrape the page for all 159 excel links and make a Beautiful Soup of all identifying codes. (Many turned out to have old excel formats and different naming) </p>
 
-My next loop cycled through the codes using a base format and each excel file into a data frame. I later came back and added an if and an if not loop since I realised that the more recent files had a different header structure. The final part of the loop was to convert all the data frames into csv files and then download them. With 2.81 million observations  and about 1.5GB of datasets this required me to change the code to zip all the datasets loaded in its directory and then download the more manageable zip files. After unzipping the downloaded folder, I created loops in a Stata do-file that would load the 159 files and append them into one large dataset. This code also tidied the data, generated year and month variables and adjusted and combined the Net Ingredient Cost which were measured in pounds in the recent PCA reports but pence in older ones. Finally I wrote an R-script that would load the large database and aggregate variables and output a csv file so as to use for charts in a more manageable format. <a href="https://github.com/HenryWRobinson/HenryWRobinson.github.io/blob/main/Project/Data/finalscrapernhscostanalysis.ipynb"> [PYTHON SCRAPER & BULK DOWNLOADER CODE] </a>
-<a href="https://github.com/HenryWRobinson/HenryWRobinson.github.io/blob/main/Project/Data/WOOHOOitaDO.do"> [STATA APPEND & TIDY LOOPS CODE] </a>
-<a href="https://github.com/HenryWRobinson/HenryWRobinson.github.io/blob/main/Project/Data/WOOHOOitaDO.do"> [R SCRIPT FOR AGGREGATES CODE] </a>
+My next loop cycled through the codes using a base format and each excel file into a data frame. I later came back and added an if and an if not loop since I realised that the more recent files had a different header structure. The final part of the loop was to convert all the data frames into csv files and then download them. With 2.81 million observations  and about 1.5GB of datasets this required me to change the code to zip all the datasets loaded in its directory and then download the more manageable zip files. After unzipping the downloaded folder, I created loops in a Stata do-file that would load the 159 files and append them into one large dataset. This code also tidied the data, generated year and month variables and adjusted and combined the Net Ingredient Cost which were measured in pounds in the recent PCA reports but pence in older ones. Finally I wrote an R-script that would load the large database and aggregate variables and output a csv file so as to use for charts in a more manageable format. <a href="https://github.com/HenryWRobinson/HenryWRobinson.github.io/blob/main/Project/Data/finalscrapernhscostanalysis.ipynb">[PYTHON SCRAPER & BULK DOWNLOADER CODE]</a>
+  <a href="https://github.com/HenryWRobinson/HenryWRobinson.github.io/blob/main/Project/Data/WOOHOOitaDO.do">[STATA APPEND & TIDY LOOPS CODE]</a>  
+<a href="https://github.com/HenryWRobinson/HenryWRobinson.github.io/blob/main/Project/Data/WOOHOOitaDO.do">[R SCRIPT FOR AGGREGATES CODE]</a>
 These enable someone to replicate this process and only need to set the file directories and unzip a folder. There were many issues in the process but it now all works efficiently and means you can easily transfer somebody this enormous dataset by just giving them the code and be able to update it when new data is published.
 </p>
 <div class="box">
   <p>For my first chart I will inspect how the total Net Ingredient Cost faced by the NHS has changed since 2008 and fit a linear regression. Whilst the R squared value is only 0.42, suggesting a weak fit to the data, we can clearly see an upwards trend.</p>
+  <p>Code: <a href ="https://github.com/HenryWRobinson/HenryWRobinson.github.io/blob/main/Project/PCAtimeRegressionChart.json">JSON</a></p>
   <div class='image-proj-container'>
     <img src="Project/Screenshot 2022-01-10 at 08.01.35.png" class='image-proj'>
   </div>
@@ -123,6 +124,7 @@ These enable someone to replicate this process and only need to set the file dir
 <div class="ccontainer">
 <div class="box">  
   <p>My second chart interactively plots the breakdown of the categories of pharmaceuticals contributing to this increase. Diabetes drugs are clearly the largest contributor to these costs and so I have made it so you can interactively switch to see its steep upwards price trend. </p>
+  <p>Code: <a href ="https://github.com/HenryWRobinson/HenryWRobinson.github.io/blob/main/Project/YearlyNICwithInsulinFocus.json">JSON</a></p>
   <div class="chart" id="chart70">
     <script>
       var myChart70 = "Project/YearlyNICwithInsulinFocus.json";
@@ -137,6 +139,7 @@ These enable someone to replicate this process and only need to set the file dir
 <div class="ccontainer">
   <div class="box">  
     <p>To check if this rise in cost is a result of higher quantites being required I next plot the quantity distributed across time. In these charts there are no obvious time trends and only seasonal changes in demand. </p>
+    <p>Code: <a href ="https://github.com/HenryWRobinson/HenryWRobinson.github.io/blob/main/Project/QuantChart.json">JSON</a></p>
     <div class="chart" id="chart71">
       <script>
         var myChart71 = "Project/QuantChart.json";
@@ -149,6 +152,7 @@ These enable someone to replicate this process and only need to set the file dir
 <div class="ccontainer">
   <div class="box">  
     <p>I then regressed the diabetes expenditure per person against the deaths attributable to diabetes using data from <a href="https://diabetesatlas.org/">The Diabetes Atlas </a>but saw inconclusive results</p>
+    <p>Code: <a href ="https://github.com/HenryWRobinson/HenryWRobinson.github.io/blob/main/Project/EXPMORT.json">JSON</a></p>
     <div class="chart" id="chart72">
       <script>
         var myChart72 = "Project/EXPMORT.json";
@@ -162,6 +166,7 @@ These enable someone to replicate this process and only need to set the file dir
 <div class="ccontainer">
   <div class="box">  
     <p>Finally I chart the average out of pocket costs for diabetics by country using data from <a href="https://www.t1international.com/access-survey/">The T1International Diabetes Survey </a> which show how much the burden faced by individuals varies with the USA being exceptionally high for a developed economy. This introduces the logical extension to this project which would be to analyse the changes in drug prices in other countries and investigate whether these are being pushed higher by pharmaceutical companies using patents. </p>
+    <p>Code: <a href ="https://github.com/HenryWRobinson/HenryWRobinson.github.io/blob/main/Project/FinalOutofPock.json">JSON</a></p>
     <div class="chart" id="chart73">
       <script>
         var myChart73 = "FinalOutofPock.json";
@@ -170,7 +175,8 @@ These enable someone to replicate this process and only need to set the file dir
     </div>
   </div>
   </div>
-   
+<h3>Conclusions:</h3> 
+<p>This project has laid the groundwork for future investigations through automation. From our large dataset we saw that costs to the NHS are rising and that it does not appear to be the influence of greater demand but instead a rise in price levels, specifically in drugs such as insulin for diabetics. Therefore, shows the need for further extensions and investigations for evidence into whether companies are artifically raising prices, how this affects international prices and the detrimental effects caused by this.  </p>  
 
 </div>
 
