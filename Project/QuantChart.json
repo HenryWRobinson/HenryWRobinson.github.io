@@ -55,7 +55,7 @@
     "y": {
       "field": "Quantity",
       "type": "quantitative",
-      "title": "NHS Net Ingredient Cost (£)",
+      "title": "Quantity",
       "axis": {
         "grid": false
       }
