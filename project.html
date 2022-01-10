@@ -1,1 +1,93 @@
-<h3>Project pending</h3>
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<!-- /////////////////// FAVICON //////////////////////////////////// -->
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+<!-- /////////////////// END FAVICON //////////////////////////////////// -->
+
+</head>
+
+<!-- /////////////////// BUTTONS //////////////////////////////////// -->
+
+<body>
+
+  <h1>Data Science 2021</h1>
+
+<div class="hcontainer" style="border-bottom:#002535">
+<a href = index.html>
+<button>Portfolio</button>   
+<a href = project.html>
+<button>Project</button>
+<a href = "https://rapidcharts.io/datascience">
+<button>Course Homepage</button>
+<a href = "https://github.com/HenryWRobinson/HenryWRobinson.github.io">
+<button>Github Repository</button>
+<style>
+  button {
+    display: inline-block;
+    background-color: #bbc3c9;
+    border-radius: 10px;
+    border: 4px double #33b573;
+    color: Hex 6  #2d414f;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    button:hover {
+      background-color: #4f7fd8;
+    }
+    button:hover span {
+      padding-right: 25px;
+    }
+    button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+</style>
+</a>
+</div>
+
+<!-- /////////////////// END BUTTONS //////////////////////////////////// -->

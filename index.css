@@ -3,10 +3,7 @@
 body {
 	background: linear-gradient(-45deg, #e4876b, #d46892, #76c3df, #6f9c92);
 	background-size: auto;
-	animation: gradient 15s ease infinite;
-	height: auto;
-	max-width: auto;
-    margin: auto;
+	animation: gradient 15s ease infinite
 }
 
 @keyframes gradient {
@@ -61,15 +58,38 @@ h1 {
 .bcontainer {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;;
-	gap: 30px 30px;
+	align-items: center;
+	align-self: center;
+	justify-content: center;
+	position:relative;
+	display: block;
 	margin-top: 30px;
 	border-style: solid;
 	border-color: #eb176b ;
 	background-color: #a9dadb;
 	padding: 30px;
 	border-radius: 25px;
+	max-width: 1200px;
+	text-align: center;
 }
+
+.hcontainer {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	align-self: center;
+	justify-content: center;;
+	gap: 30px 30px;
+	margin-top: 30px;
+	border-style: solid;
+	border-color: #eb176b ;
+	background-color: #124874;
+	padding: 30px;
+	border-radius: 25px;
+	max-width: 1200px;
+	text-align: center;
+}
+
 
 .ccontainer {
 	display: flex;
@@ -113,4 +133,14 @@ h1 {
 	max-width:800px;
 }
   
+.image-week9 {
+	box-sizing:border-box;
+	background-color:#ffffff;
+	width:300;
+	border-radius:10px;
+	text-align:center;
+	display:inline-block;
+	margin: 10px;
+	max-width: 600px;
+}
 
