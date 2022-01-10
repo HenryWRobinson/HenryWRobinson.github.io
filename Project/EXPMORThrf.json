@@ -1,0 +1,74 @@
+{"title": {
+      "text": "Diabetes Expenditure Against Mortality",
+      "fontSize": 15,
+      "subtitle":"Country Level, Data Source: https://diabetesatlas.org/data/",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":12,
+      "anchor": "start",
+      "color": "black"
+    },
+  "data": {
+    "url": "https://raw.githubusercontent.com/HenryWRobinson/HenryWRobinson.github.io/main/Project/Data/FinalCrossDeathsVExp2.csv",
+    "format": {"type": "csv"}
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true
+      },
+      "encoding": {
+        "x": {
+          "field": "DeathsAttributable",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "DiabetesRelatedExpPP",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "firebrick"
+      },
+      "transform": [
+        {
+          "regression": "DeathsAttributable",
+          "on": "DiabetesRelatedExpPP"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "DeathsAttributable",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "DiabetesRelatedExpPP",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "regression": "DeathsAttributable",
+          "on": "DiabetesRelatedExpPP",
+          "params": true
+        },
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "firebrick",
+        "x": "width",
+        "align": "right",
+        "y": -5
+      },
+      "encoding": {
+        "text": {"type": "nominal", "field": "R2"}
+      }
+    }
+  ]
+}
