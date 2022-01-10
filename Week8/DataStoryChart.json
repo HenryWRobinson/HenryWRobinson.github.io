@@ -2,8 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     
     "title": {
-      "text": "National Lottery Jackpots",
-      "subtitle":"Scraped from https://www.national-lottery.co.uk/results/lotto/draw-history",
+      "text": "Does the manufacturing sector keep shrinking because the service sector keeps growing?",
+      "subtitle":"Source: ONS",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",

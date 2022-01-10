@@ -99,13 +99,25 @@
   
 <!-- /////////////////// Chart 1 //////////////////////////////////// --> 
 <div class="ccontainer">
+  <p>My first approach to my project was to analyse how much the NHS pays
+    for phramaceuticals and try to identify any trends. For this I went to the 
+    <a href="https://www.nhsbsa.nhs.uk/prescription-data/dispensing-data/prescription-cost-analysis-pca-data">NHS</a> 
+    Prescription Cost Analysis monthly database homepage. This page contained all the Excel download links for monthly data going back to 2008 and containing information on a long dataset of medical and pharmaceutical supplies.
+   I then decided to create an automated and replicable method of combining all these datasets. This turned out to be a huge undertaking with many hurdles.
+   First, I built a python loop that would first scrape the page for all 159 excel links and make a Beautiful Soup of all identifying codes. (Many turned out to have old excel formats and different naming) </p>
+
+My next loop cycled through the codes using a base format and each excel file into a data frame. I later came back and added an if and an if not loop since I realised that the more recent files had a different header structure. The final part of the loop was to convert all the data frames into csv files and then download them. With 2.81 million observations  and about 1.5GB of datasets this required me to change the code to zip all the datasets loaded in its directory and then download the more manageable zip files. After unzipping the downloaded folder, I created loops in a Stata do-file that would load the 159 files and append them into one large dataset. This code also tidied the data, generated year and month variables and adjusted and combined the Net Ingredient Cost which were measured in pounds in the recent PCA reports but pence in older ones. Finally I wrote an R-script that would load the large database and aggregate variables and output a csv file so as to use for charts in a more manageable format. <a href="https://github.com/HenryWRobinson/HenryWRobinson.github.io/blob/main/Project/Data/finalscrapernhscostanalysis.ipynb">PYTHON SCRAPER & BULK DOWNLOADER CODE</a>
+<a href="https://github.com/HenryWRobinson/HenryWRobinson.github.io/blob/main/Project/Data/WOOHOOitaDO.do">STATA APPEND & TIDY LOOPS CODE</a>
+<a href="https://github.com/HenryWRobinson/HenryWRobinson.github.io/blob/main/Project/Data/WOOHOOitaDO.do">R SCRIPT FOR AGGREGATES CODE</a>
+These enable someone to replicate this process and only need to set the file directories and unzip a folder. There were many issues in the process but it now all works efficiently and means you can easily transfer somebody this enormous dataset by just giving them the code and be able to update it when new data is published.
+</p>
 <div class="box">
   <div class='image-proj-container'>
     <img src="Project/Screenshot 2022-01-10 at 08.01.35.png" class='image-proj'>
   </div>
 </div>
 </div>
-</div>
+
 <!-- /////////////////// Chart 2 //////////////////////////////////// --> 
 <div class="ccontainer">
 <div class="box">  
