@@ -1,0 +1,74 @@
+   
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  "title": {
+      "text": "Decomposed Aggregate Yearly Pharmaceutical Cost to NHS",
+      "fontSize": 20,
+      "subtitle":"Colours represent category of pharmaceutical",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":12,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "description": "NIC",
+    "data": {
+      "url": "https://raw.githubusercontent.com/HenryWRobinson/HenryWRobinson.github.io/main/Project/Data/YearlyAggregateNHSnicByCategory.csv",
+      "format": {"type": "csv"}
+    },
+    
+    "height": 300,
+    
+    "width": "container",
+    
+    "selection": {
+      "Category": {
+        "type": "single",
+        "fields": ["BNFSectionName"],
+        "bind": {
+          "input": "select",
+          "options": [
+            null, "Drugs Used In Diabetes"
+          ],
+          "name": "Change to Just Diabetes Drugs: "
+        }
+      }
+    },
+    "transform": [
+      {"filter": {"selection": "Category"}}
+    ],
+
+    "mark": {"type": "bar"},
+
+    
+  
+    "encoding": {
+      "x": {
+        "field": "year", 
+        "type": "nominal", 
+        "title": null,
+        "axis": {"labelAngle": 0}},
+      "y": {
+        "field": "NIC",
+        "type": "quantitative",
+        "title": "NHS Net Ingredient Cost (£)",
+        "axis": {
+          "grid": false
+        }
+      },
+        "color": {
+        "field": "BNFSectionName",
+        "type": "nominal",
+        "legend": null
+        },
+       
+      
+
+        "tooltip": [
+          {"field": "BNFSectionName", "type": "nominal", "title": "Category"}
+      ]
+      }
+
+    
+}
