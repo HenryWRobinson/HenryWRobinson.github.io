@@ -11,6 +11,7 @@
     "url": "https://raw.githubusercontent.com/HenryWRobinson/HenryWRobinson.github.io/main/Project/Data/FinalCrossDeathsVExp2.csv",
     "format": {"type": "csv"}
   },
+  "width": 400,
   "layer": [
     {
       "mark": {

@@ -49,6 +49,7 @@ h1, h3, p{
     border-radius: 10px;
     border-color: rgb(0, 0, 0);
 	font-size: 10pxp;
+	max-width: 800px;
 }
 
 h1 {

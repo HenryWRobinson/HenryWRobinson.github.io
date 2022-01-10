@@ -1,77 +1,77 @@
   
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+"title": {
+    "text": "Monthly Time Series: Quantity of pharmaceuticals prescribed by the NHS",
+    "fontSize": 20,
+    "subtitle":"Colours represent category of pharmaceutical",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":12,
+    "anchor": "start",
+    "color": "black"
+  },
+
+  "description": "NIC",
+  "data": {
+    "url": "https://raw.githubusercontent.com/HenryWRobinson/HenryWRobinson.github.io/main/Project/Data/MonthlyAggregateNHSQuantByCategory.csv",
+    "format": {"type": "csv"}
+  },
   
-  "title": {
-      "text": "Monthly Time Series: Quantity of pharmaceuticals prescribed by the NHS",
-      "fontSize": 20,
-      "subtitle":"Colours represent category of pharmaceutical",
-      "subtitleFontStyle":"italic",
-      "subtitleFontSize":12,
-      "anchor": "start",
-      "color": "black"
-    },
+  "height": 480,
   
-    "description": "NIC",
-    "data": {
-      "url": "https://raw.githubusercontent.com/HenryWRobinson/HenryWRobinson.github.io/main/Project/Data/MonthlyAggregateNHSQuantByCategory.csv",
-      "format": {"type": "csv"}
-    },
-    
-    "height": 480,
-    
-    "width": 650,
-    
-    "selection": {
-      "Category": {
-        "type": "single",
-        "fields": ["BNFSectionName"],
-        "bind": {
-          "input": "select",
-          "options": [
-            null, "Drugs Used In Diabetes","Oral Nutrition","Emollient & Barrier Preparations","Analgesics"
-          ],
-          "name": "Change to Focus Category: "
-        }
+  "width": 650,
+  
+  "selection": {
+    "Category": {
+      "type": "single",
+      "fields": ["BNFSectionName"],
+      "bind": {
+        "input": "select",
+        "options": [
+          null, "Drugs Used In Diabetes","Oral Nutrition","Emollient & Barrier Preparations","Analgesics"
+        ],
+        "name": "Change to Focus Category: "
       }
-    },
-    "transform": [
-      {"filter": {"selection": "Category"}}
-    ],
+    }
+  },
+  "transform": [
+    {"filter": {"selection": "Category"}}
+  ],
 
-    "mark": {"type": "line",
-              "width": 10
-    },
+  "mark": {"type": "line",
+            "width": 10
+  },
 
-    
   
-    "encoding": {
-      "x": {
-        "field": "id", 
-        "type": "nominal", 
-        "title": "Year from 2008-2021",
-        "axis": {"labelAngle": 0}
-        },
-      "y": {
-        "field": "Quantity",
-        "type": "quantitative",
-        "title": "NHS Net Ingredient Cost (£)",
-        "axis": {
-          "grid": false
-        }
+
+  "encoding": {
+    "x": {
+      "field": "id", 
+      "type": "temporal", 
+      "title": "Time",
+      "axis": {"labelAngle": 90}
       },
-        "color": {
-        "field": "BNFSectionName",
-        "type": "nominal",
-        "legend": null
-        },
-       
-      
-
-        "tooltip": [
-          {"field": "BNFSectionName", "type": "nominal", "title": "Category"}
-      ]
+    "y": {
+      "field": "Quantity",
+      "type": "quantitative",
+      "title": "NHS Net Ingredient Cost (£)",
+      "axis": {
+        "grid": false
       }
-
+    },
+      "color": {
+      "field": "BNFSectionName",
+      "type": "nominal",
+      "legend": null
+      },
+     
     
+
+      "tooltip": [
+        {"field": "BNFSectionName", "type": "nominal", "title": "Category"}
+    ]
+    }
+
+  
 }

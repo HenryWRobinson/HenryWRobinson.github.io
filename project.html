@@ -136,7 +136,7 @@ These enable someone to replicate this process and only need to set the file dir
 
 <div class="ccontainer">
   <div class="box">  
-    <p>To check if this rise in cost is a result of higher quantites being required I next plot Quantity distributed across time. In these charts there are no obvious time trends and only seasonal changes in demand. </p>
+    <p>To check if this rise in cost is a result of higher quantites being required I next plot the quantity distributed across time. In these charts there are no obvious time trends and only seasonal changes in demand. </p>
     <div class="chart" id="chart71">
       <script>
         var myChart71 = "Project/QuantChart.json";
@@ -145,19 +145,33 @@ These enable someone to replicate this process and only need to set the file dir
     </div>
   </div>
   </div>
-<!-- /////////////////// Chart 3 //////////////////////////////////// --> 
+<!-- /////////////////// Chart 4 //////////////////////////////////// --> 
 <div class="ccontainer">
   <div class="box">  
-    <p> </p>
+    <p>I then regressed the diabetes expenditure per person against the deaths attributable to diabetes using data from <a href="https://diabetesatlas.org/">The Diabetes Atlas </a>but saw inconclusive results</p>
     <div class="chart" id="chart72">
       <script>
-        var myChart71 = "Project/EXPMORT.json";
+        var myChart72 = "Project/EXPMORT.json";
         vegaEmbed('#chart72', myChart72);
       </script>
     </div>
   </div>
   </div>
   
+<!-- /////////////////// Chart 5 //////////////////////////////////// --> 
+<div class="ccontainer">
+  <div class="box">  
+    <p>Finally I chart the average out of pocket costs for diabetics by country using data from <a href="https://www.t1international.com/access-survey/">The T1International Diabetes Survey </a> which show how much the burden faced by individuals varies with the USA being exceptionally high for a developed economy. This introduces the logical extension to this project which would be to analyse the changes in drug prices in other countries and investigate whether these are being pushed higher by pharmaceutical companies using patents. </p>
+    <div class="chart" id="chart73">
+      <script>
+        var myChart73 = "FinalOutofPock.json";
+        vegaEmbed('#chart73', myChart73);
+      </script>
+    </div>
+  </div>
+  </div>
+   
+
 </div>
 
 </body>
