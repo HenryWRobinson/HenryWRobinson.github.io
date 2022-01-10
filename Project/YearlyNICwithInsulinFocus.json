@@ -18,9 +18,9 @@
       "format": {"type": "csv"}
     },
     
-    "height": 300,
+    "height": 480,
     
-    "width": "container",
+    "width": 650,
     
     "selection": {
       "Category": {
