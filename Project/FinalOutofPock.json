@@ -1,0 +1,63 @@
+   
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  "title": {
+      "text": "Monthly Time Series: Quantity of pharmaceuticals prescribed by the NHS",
+      "fontSize": 20,
+      "subtitle":"Colours represent category of pharmaceutical",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":12,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "description": "NIC",
+    "data": {
+      "url": "https://raw.githubusercontent.com/HenryWRobinson/HenryWRobinson.github.io/main/Project/Data/FinalBeep.csv",
+      "format": {"type": "csv"}
+    },
+    
+    "height": 400,
+    
+    "width": 400,
+    
+    
+    "mark": {"type": "bar",
+              "width": 10
+    },
+
+    
+  
+    "encoding": {
+      "x": {
+        "field": "country", 
+        "type": "nominal", 
+        "title": null,
+        "axis": {"labelAngle": 90}
+        },
+      "y": {
+        "field": "usd_sum",
+        "type": "quantitative",
+        "title": "NHS Net Ingredient Cost (£)",
+        "axis": {
+          "grid": false
+        }
+      
+      },
+        "color": {
+        "field": "country",
+        "type": "nominal",
+        "legend": null
+        },
+    
+       
+      
+
+        "tooltip": [
+          {"field": "country", "type": "nominal", "title": "Country"}
+      ]
+      }
+
+    
+}
