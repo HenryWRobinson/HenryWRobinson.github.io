@@ -3,9 +3,9 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   
   "title": {
-      "text": "Monthly Time Series: Quantity of pharmaceuticals prescribed by the NHS",
+      "text": "Average out of pocket costs to diabetics",
       "fontSize": 20,
-      "subtitle":"Colours represent category of pharmaceutical",
+      "subtitle":"Source: T1 International Diabetes Survey",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":12,
       "anchor": "start",
@@ -39,7 +39,7 @@
       "y": {
         "field": "usd_sum",
         "type": "quantitative",
-        "title": "NHS Net Ingredient Cost (£)",
+        "title": "Average out of pocket cost (USD)",
         "axis": {
           "grid": false
         }
